@@ -4,7 +4,7 @@ import pygame
 SPEED = 50          # Change the speed of the game here.
 
 # Window
-SCREEN_WIDTH = 970
+SCREEN_WIDTH = 1200
 SCREEN_HEIGHT = 710
 CAPTION = 'Wumpus World'
 
@@ -29,22 +29,14 @@ IMG_ARROW_UP = './Assets/Images/arrow_up.png'
 IMG_ARROW_DOWN = './Assets/Images/arrow_down.png'
 
 # Map
-MAP_LIST = ['./Assets/Input/map_1.txt',
-            './Assets/Input/map_2.txt',
-            './Assets/Input/map_3.txt',
-            './Assets/Input/map_4.txt',
-            './Assets/Input/map_5.txt']
+MAP_LIST = ['./Assets/Input/map_1.txt']
 MAP_NUM = len(MAP_LIST)
 
 # Output
-OUTPUT_LIST = ['./Assets/Output/result_1.txt',
-               './Assets/Output/result_2.txt',
-               './Assets/Output/result_3.txt',
-               './Assets/Output/result_4.txt',
-               './Assets/Output/result_5.txt']
+OUTPUT_LIST = ['./Assets/Output/result_1.txt']
 
 # Fonts
-FONT_MRSMONSTER = './Assets/Fonts/mrsmonster.ttf'
+FONT_GRINCHED = './Assets/Fonts/Grinched.ttf'
 
 # Colors
 WHITE = (255, 255, 255)
@@ -52,6 +44,7 @@ BLACK = (0, 0, 0)
 LIGHT_GREY = (170, 170, 170)
 DARK_GREY = (75, 75, 75)
 RED = (255, 0, 0)
+GREEN = (60,179,113)
 
 # state
 RUNNING = 'running'

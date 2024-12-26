@@ -38,10 +38,10 @@ class Pit:
 
 class Wumpus:
     def __init__(self, x, y):
-        self.image = pygame.image.load(IMG_WUMPUS).convert()
+        self.image = pygame.image.load(IMG_WUMPUS).convert_alpha()
         self.image = pygame.transform.scale(self.image, (100, 200))
         self.size = 10
-        self.pos = (835, 100)
+        self.pos = (935, 100)
         self.is_discovered = None
         self.noti = [[False for i in range(self.size)] for j in range(self.size)]
         self.wumpus_pos = [[False for i in range(self.size)] for j in range(self.size)]
@@ -49,11 +49,11 @@ class Wumpus:
             self.wumpus_pos[x[i]][y[i]] = True
 
     def wumpus_kill(self, screen, font):
-        text = font.render('Killed a wumpus!!!', True, BLACK)
+        text = font.render('A WUMPUS KILLED!!!', True, BLACK)
         textRect = text.get_rect()
         textRect.center = self.pos
         screen.blit(text, textRect)
-        screen.blit(self.image, (800, 200))
+        screen.blit(self.image, (920, 200))
         pygame.display.update()
 
     def wumpus_notification(self):
@@ -96,18 +96,18 @@ class Wumpus:
 
 class Gold:
     def __init__(self):
-        self.image = pygame.image.load(IMG_GOLD).convert()
+        self.image = pygame.image.load(IMG_GOLD).convert_alpha()
         self.image = pygame.transform.scale(self.image, (150,300))
-        self.pos = (835, 100)
+        self.pos = (935, 100)
 
     def grab_gold(self, screen, font):
-        text = font.render('You found a gold!!!', True, BLACK)
+        text = font.render('gold!!!', True, BLACK)
         textRect = text.get_rect()
         textRect.center = self.pos
         screen.blit(text, textRect)
-        screen.blit(self.image, (750, 200))
+        screen.blit(self.image, (850, 200))
         text = font.render('Score + 100', True, BLACK)
-        textRect.center = (900, 600)
+        textRect.center = (950, 600)
         screen.blit(text, textRect)
         pygame.display.update()
 
